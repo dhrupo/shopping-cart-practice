@@ -28,9 +28,14 @@ document.getElementById('remove-case').addEventListener('click', () => {
 
 document.getElementById('check-out').addEventListener('click', () => {
   document.getElementById('amount').innerText = document.getElementById('total').innerText;
-  document.getElementById('checkout-details').style.display = "block";
   document.getElementById('cart-section').style.display = "none";
+  document.getElementById('checkout-details').style.display = "block";
 });
+
+document.getElementById('go-back').addEventListener('click', () => {
+  document.getElementById('checkout-details').style.display = "none";
+  document.getElementById('cart-section').style.display = "block";
+})
 
 function handleProductChange(count, value, isPhone, isIncrease) {
   const productCount = parseFloat(document.getElementById(count).value);
